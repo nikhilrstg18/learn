@@ -3,8 +3,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `books`,
-    siteUrl: `https://www.yourdomain.tld`
+    title:`Learn`,
+    welcome: `Welcome Learner`,
+    description:'Subject by experience',
+    author: `Nikhil Rustagi`,
+    copyright:'© 2024',
+    siteUrl: `https://www.github.io/nikhilrstg18/learn`,
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
