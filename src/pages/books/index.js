@@ -8,26 +8,45 @@ const books = [
     key: "js",
     to: "/books/js",
     name: "Javascript",
+    color:[
+      booksStyles.bookCover,
+      booksStyles.yellow,
+    ].join(" ")
   },
   {
     key: "dotnet",
     to: "/books/dotnet",
     name: ".Net",
+    color:[
+      booksStyles.bookCover,
+      booksStyles.purple,
+    ].join(" ")
   },
   {
     key: "py",
     to: "/books/py",
     name: "Python",
+    color:[
+      booksStyles.bookCover,
+      booksStyles.blue,
+    ].join(" ")
   },
   {
     key: "ms-sql",
     to: "/books/ms-sql",
     name: "SqlServer",
+    color:[
+      booksStyles.bookCover
+    ].join(" ")
   },
   {
     key: "mongo",
     to: "/books/mongo",
     name: "MongoDB",
+    color:[
+      booksStyles.bookCover,
+      booksStyles.green,
+    ].join(" ")
   },
 ];
 export default function Books() {
@@ -41,10 +60,7 @@ export default function Books() {
               <div className={booksStyles.bookWrapper}>
                 <div className={booksStyles.book}>
                   <div
-                    className={[
-                      booksStyles.bookCover,
-                      booksStyles.blue,
-                    ].join(" ")}>
+                    className={book.color}>
                     <div className={booksStyles.bookSkin}>{book.name}</div>
                   </div>
                   <div
