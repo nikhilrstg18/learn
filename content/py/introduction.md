@@ -1,9 +1,9 @@
 ---
-title: "JS Book Introduction"
-metaTitle: "This is the title tag of JS Book"
+title: "Python Book Introduction"
+metaTitle: "This is the title tag of Python Book"
 metaDescription: "This is the meta description"
-slug: "js"
-stack: "Javascript"
+slug: "py"
+stack: "Python"
 ---
 
 Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.

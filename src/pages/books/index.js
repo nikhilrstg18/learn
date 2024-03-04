@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../../layouts/Layout";
 import * as booksStyles from "../../styles/books.module.css";
 
-const books = [
+const books2 = [
   {
     key: "js",
     to: "/books/js",
@@ -49,19 +49,22 @@ const books = [
     ].join(" ")
   },
 ];
-export default function Books() {
+export default function Books({data}) {
+  const books = data.allMarkdownRemark.nodes;
   return (
     <Layout>
       <section>
         <h1>Books</h1>
         <div className={booksStyles.books}>
-          {books.map((book) => (
-            <Link to={book.to} title={book.name} key={book.key}>
+          {books.map((book) => {
+            const {slug, title, stack} = book.frontmatter;
+            return (
+            <Link to={slug} title={title} key={book.id}>
               <div className={booksStyles.bookWrapper}>
                 <div className={booksStyles.book}>
                   <div
-                    className={book.color}>
-                    <div className={booksStyles.bookSkin}>{book.name}</div>
+                    className={books2.find(x=>x.key === slug).color}>
+                    <div className={booksStyles.bookSkin}>{stack}</div>
                   </div>
                   <div
                     className={[
@@ -71,9 +74,25 @@ export default function Books() {
                 </div>
               </div>
             </Link>
-          ))}
+          )})}
         </div>
       </section>
     </Layout>
   );
 }
+
+export const query = graphql`
+  query BookInfo {
+    allMarkdownRemark(filter: {}, sort: {frontmatter: {stack: ASC}}) {
+      nodes {
+        frontmatter {
+          metaDescription
+          metaTitle
+          slug
+          stack
+          title
+        }
+      }
+    }
+  }
+`

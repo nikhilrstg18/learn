@@ -1,0 +1,15 @@
+.book {
+  background: #fafafa;
+  height: 100%;
+  overflow: auto;
+  padding: 1rem;
+}
+.book h1 {
+  color: #333;
+}
+.book h2 {
+  color: grey;
+}
+.html {
+  margin-top: 2rem;
+}

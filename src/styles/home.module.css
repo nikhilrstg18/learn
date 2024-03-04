@@ -18,5 +18,5 @@
 .banner{
     width:50%;
     margin: 0 auto;
-    filter: blur(0.7rem);
+    /* filter: blur(0.7rem); */
 }

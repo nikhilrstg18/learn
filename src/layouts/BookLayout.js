@@ -2,15 +2,25 @@ import React from "react";
 import Content from "../components/Content";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
 
-export default function BookLayout({ children }) {
+export default function BookLayout({ children, content}) {
   return (
     <div>
       <NavBar></NavBar>
-      <div style={{display:'flex',flexFlow:'row wrap', justifyContent: 'space-between', alignItems: 'stretch', width:'100%', height:'92vh'}}>
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          justifyContent: "space-between",
+          alignItems: "stretch",
+          width: "100%",
+          height: "92vh",
+        }}>
         <SideBar></SideBar>
-        <main style={{flex:'1 auto', padding:'.5rem'}}>{children}</main>
-        <Content></Content>
+        <main style={{ flex: "1 auto", padding: ".5rem" }}>{children}</main>
+        <Content content={content}></Content>
       </div>
     </div>
   );

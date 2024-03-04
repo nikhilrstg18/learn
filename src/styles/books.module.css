@@ -105,19 +105,19 @@
 }
 
 .bookCover.blue {
-  background: #2e95aa;
+  background: linear-gradient(128.87deg, #3471a3 14.05%, #6387a5 89.3%);;
 }
 .bookCover.blue:before {
   background: linear-gradient(
     to right,
     #1e606e 0%,
-    #2e95aa 12%,
+    #429feb 12%,
     #1e606e 25%,
-    #2e95aa 37%,
+    #429feb 37%,
     #1e606e 50%,
-    #2e95aa 62%,
+    #429feb 62%,
     #1e606e 75%,
-    #2e95aa 87%,
+    #429feb 87%,
     #1e606e 100%
   );
 }
