@@ -1,6 +1,6 @@
 .books {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   padding: 2rem;
 }
 .book2 {

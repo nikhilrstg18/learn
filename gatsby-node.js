@@ -7,8 +7,6 @@ query BookInfo {
     allMarkdownRemark(filter: {}, sort: {frontmatter: {stack: ASC}}) {
       nodes {
         frontmatter {
-          metaDescription
-          metaTitle
           slug
           stack
           title

@@ -1,33 +1,47 @@
 ---
-title: "JS Book Introduction"
-metaTitle: "This is the title tag of JS Book"
-metaDescription: "This is the meta description"
+title: "Intro to JavaScript"
 slug: "js"
 stack: "Javascript"
+prev: ""
+next: "fundamentals/engine"
 ---
 
-Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.
 
-# Fundamentals
-Heading 1 text
-## Item 1
-## Item 2
 
-# Beginner
-Heading 2 text
-## Item 1
-## Item 2
+JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.
 
-# Intermediate
-Heading 3 text
-## Item 1
-## Item 2
+## **What is JS**?  
 
-# Advance
-Heading 4 text
-## Item 1
-## Item 2
-# Expert
-Heading 5 text
-## Item 1
-## Item 2
+JavaScript (JS) is
+- **dynamic** (aka loosely typed)
+- **interpreted** or **compiled** (JIT compiled)
+- **garbage-collected**
+- **single-threaded**
+- **multi-paradigm** (functional and object-oriented)
+- a programming language with **functions as first-class citizens**.
+
+> Note: you will be able to elaborate and explain javascript with more clarity by end of this section
+While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. 
+
+Read more @ [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+
+## **When and Who created JS**?
+
+In 1995, **Brendon Eich** created JS to add interactivity in  egendary Netscape Navigator web browser.
+
+## **Why learn JS**?
+
+JS was popular, is popular and with its ongoing evolution, JS will remain popular.\
+See most popular technology @ [StackOverflow survey 2022](https://survey.stackoverflow.co/2022/#technology-most-popular-technologies)
+
+## **Where to use JS**?
+
+JS runs both in and outside the web browser.
+
+
+## **How JS works**?
+
+To understand how JS works, you need to understand 
+- JS Engine
+- JS Runtime

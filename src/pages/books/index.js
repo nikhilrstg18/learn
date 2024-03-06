@@ -6,7 +6,7 @@ import * as booksStyles from "../../styles/books.module.css";
 const books2 = [
   {
     key: "js",
-    to: "/books/js",
+    to: "/js",
     name: "Javascript",
     color:[
       booksStyles.bookCover,
@@ -15,7 +15,7 @@ const books2 = [
   },
   {
     key: "dotnet",
-    to: "/books/dotnet",
+    to: "/dotnet",
     name: ".Net",
     color:[
       booksStyles.bookCover,
@@ -24,7 +24,7 @@ const books2 = [
   },
   {
     key: "py",
-    to: "/books/py",
+    to: "/py",
     name: "Python",
     color:[
       booksStyles.bookCover,
@@ -33,7 +33,7 @@ const books2 = [
   },
   {
     key: "ms-sql",
-    to: "/books/ms-sql",
+    to: "/ms-sql",
     name: "SqlServer",
     color:[
       booksStyles.bookCover
@@ -41,7 +41,7 @@ const books2 = [
   },
   {
     key: "mongo",
-    to: "/books/mongo",
+    to: "/mongo",
     name: "MongoDB",
     color:[
       booksStyles.bookCover,
@@ -50,7 +50,7 @@ const books2 = [
   },
 ];
 export default function Books({data}) {
-  const books = data.allMarkdownRemark.nodes;
+  const books = data.allMarkdownRemark.nodes.filter(x=>!x?.parent?.relativeDirectory?.includes("/"));
   return (
     <Layout>
       <section>
@@ -63,7 +63,7 @@ export default function Books({data}) {
               <div className={booksStyles.bookWrapper}>
                 <div className={booksStyles.book}>
                   <div
-                    className={books2.find(x=>x.key === slug).color}>
+                    className={books2.find(x=>x.key === slug)?.color}>
                     <div className={booksStyles.bookSkin}>{stack}</div>
                   </div>
                   <div
@@ -82,15 +82,21 @@ export default function Books({data}) {
 }
 
 export const query = graphql`
-  query BookInfo {
-    allMarkdownRemark(filter: {}, sort: {frontmatter: {stack: ASC}}) {
+  query BooksInfo {
+    allMarkdownRemark(filter: {parent: {}}, sort: {frontmatter: {stack: ASC}}) {
       nodes {
         frontmatter {
-          metaDescription
-          metaTitle
           slug
           stack
           title
+          next
+          prev
+        }
+        id
+        parent {
+          ... on File {
+            relativeDirectory
+          }
         }
       }
     }

@@ -1,9 +1,9 @@
 ---
-title: "JS Book Introduction"
-metaTitle: "This is the title tag of JS Book"
-metaDescription: "This is the meta description"
+title: "Intro to MS SQL Server"
 slug: "ms-sql"
-stack: "MS Sql Server"
+stack: "T-SQL"
+prev: ""
+next: "ms-sql/fundamentals/engine"
 ---
 
 Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.

@@ -2,14 +2,34 @@
   background: #fafafa;
   height: 100%;
   overflow: auto;
-  padding: 1rem;
+  padding: .75rem;
 }
+.book h2,h3, h4, h5,h6 {
+  margin: 2rem 0 1rem 0;
+  color: grey;
+}
+.book p:has(img){
+  display: block;
+  text-align: center;
+} 
 .book h1 {
   color: #333;
+  text-align: center;
+  display: block;
 }
-.book h2 {
-  color: grey;
+.book cite {
+    color: lightcoral;
+    text-align: center;
+    display: block;
+    margin-bottom: 2rem;
 }
 .html {
   margin-top: 2rem;
+}
+.np{
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }

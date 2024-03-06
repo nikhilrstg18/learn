@@ -12,7 +12,7 @@ export default function BookLayout({ children, content}) {
       <div
         style={{
           display: "flex",
-          flexFlow: "row wrap",
+          flexFlow: "row nowrap",
           justifyContent: "space-between",
           alignItems: "stretch",
           width: "100%",

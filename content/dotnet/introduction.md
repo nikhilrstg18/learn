@@ -1,12 +1,12 @@
 ---
-title: ".Net Introduction"
-metaTitle: "This is the title tag of .Net Book"
-metaDescription: "This is the meta description"
+title: "Intro to .Net"
 slug: "dotnet"
 stack: ".Net"
+prev: ""
+next: "dotnet/fundamentals/engine"
 ---
 
-Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.
+.NET is free, open-source, secure, reliable, and high-performance application platform.
 
 ```markdown markmap
 # Raodmap
@@ -99,3 +99,4 @@ var game = "game";
 game+='hellow'
 console.log(game); //gameHello
 ```
+
