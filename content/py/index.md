@@ -1,9 +1,11 @@
 ---
-title: "Intro to MS SQL Server"
-slug: "ms-sql"
-stack: "T-SQL"
+title: "Intro to Python"
+slug: "py"
+stack: "Python"
 prev: ""
-next: "ms-sql/fundamentals/engine"
+next: "py/fundamentals/engine"
+level: ""
+date: "Wed Mar 06 2024 22:16:35 GMT+0530 (India Standard Time)"
 ---
 
 Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.

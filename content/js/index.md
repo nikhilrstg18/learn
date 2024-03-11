@@ -2,8 +2,10 @@
 title: "Intro to JavaScript"
 slug: "js"
 stack: "Javascript"
-prev: ""
-next: "fundamentals/engine"
+prev: "../"
+next: "fundamentals"
+level: ""
+date: "Wed Mar 06 2024 22:16:35 GMT+0530 (India Standard Time)"
 ---
 
 

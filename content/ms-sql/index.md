@@ -1,9 +1,11 @@
 ---
-title: "Intro to MongoDB"
-slug: "mongo"
-stack: "MongoDB"
+title: "Intro to MS SQL Server"
+slug: "ms-sql"
+stack: "T-SQL"
 prev: ""
-next: "mongo/fundamentals/engine"
+next: "ms-sql/fundamentals/engine"
+level: ""
+date: "Wed Mar 06 2024 22:16:35 GMT+0530 (India Standard Time)"
 ---
 
 Some introduction text. Lists out all the headings from h1 to h6. Markdown link handling for relative and absolute URLs. Easy to customise.

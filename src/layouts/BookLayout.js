@@ -5,7 +5,7 @@ import SideBar from "../components/SideBar";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
-export default function BookLayout({ children, content}) {
+export default function BookLayout({ children, content, sideMenu}) {
   return (
     <div>
       <NavBar></NavBar>
@@ -18,7 +18,7 @@ export default function BookLayout({ children, content}) {
           width: "100%",
           height: "92vh",
         }}>
-        <SideBar></SideBar>
+        <SideBar menu={sideMenu}></SideBar>
         <main style={{ flex: "1 auto", padding: ".5rem" }}>{children}</main>
         <Content content={content}></Content>
       </div>

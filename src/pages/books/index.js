@@ -54,7 +54,6 @@ export default function Books({data}) {
   return (
     <Layout>
       <section>
-        <h1>Books</h1>
         <div className={booksStyles.books}>
           {books.map((book) => {
             const {slug, title, stack} = book.frontmatter;

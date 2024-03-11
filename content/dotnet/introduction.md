@@ -4,6 +4,8 @@ slug: "dotnet"
 stack: ".Net"
 prev: ""
 next: "dotnet/fundamentals/engine"
+level: ""
+date: "Wed Mar 06 2024 22:16:35 GMT+0530 (India Standard Time)"
 ---
 
 .NET is free, open-source, secure, reliable, and high-performance application platform.

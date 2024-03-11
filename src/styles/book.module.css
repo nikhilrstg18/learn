@@ -1,5 +1,5 @@
 .book {
-  background: #fafafa;
+  background : #fff;
   height: 100%;
   overflow: auto;
   padding: .75rem;
@@ -27,9 +27,29 @@
   margin-top: 2rem;
 }
 .np{
-  margin-top: 2rem;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  position: fixed;
+  bottom: 1rem;
+
+}
+.np a{
+  padding: .5rem;
+  color: lightcoral;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.np a:hover{
+  background: #282a36;
+}
+.footer{
+  text-align: center;
+}
+.footer img{
+  width: 2%;
 }

@@ -2,22 +2,25 @@
 title: "JS Engine"
 slug: "js/fundamentals/engine"
 stack: "Javascript"
-prev: "../../"
+prev: "../"
 next: "" 
+level: "fundamentals"
+date: "Wed Mar 06 2024 22:16:35 GMT+0530 (India Standard Time)"
 ---
 
-![feature image](../../../src/images/js/js101.gif)
+
+![feature image](../../../../src/images/js/js101.gif) 
 
 Almost everyone who has worked with JS, has heard about JS Engine
 
 - JS is a single-threaded language that uses callbacks or Callback-Queue
 - JS is interpreted or compiled?
 
-![without JS Engine](../../../src/images/js/engine-1.gif)
+![without JS Engine](../../../../src/images/js/engine-1.gif)
 
 So if you write some English-like statement/code in your JS file. And if you directly provide this JS file as input to your computer, it might raise a flag that it does understand JS language.
 
-![With JS Engine](../../../src/images/js/engine-2.gif)
+![With JS Engine](../../../../src/images/js/engine-2.gif)
 
 JS engine is going to take it as input and convert it to output that is more familiar to a machine (machine code)
 
@@ -26,7 +29,7 @@ JS engine is going to take it as input and convert it to output that is more fam
 So, we learned that JS Engine is the one who takes our JS file/code and converts that to machine code to be understandable by machine
 Let's look inside the popular engine used by chrome and NodeJS i.e. Google's V8 JS Engine
 
-![Inside JS Engine](../../../src/images/js/engine-3.gif)
+![Inside JS Engine](../../../../src/images/js/engine-3.gif)
 
 So when you give a JS file to the JS engine to run it
 
@@ -36,7 +39,7 @@ So when you give a JS file to the JS engine to run it
 
 - **Interpreter**: Translate the source code into machine code, do it by reading line by line execute it. Of course, the source code still needs to be converted into machine code, but it simply happens right before it’s executed and not ahead of time
 
-  ![Interpreter](./../../../src/images/js/engine-4.png)
+  ![Interpreter](./../../../../src/images/js/engine-4.png)
 
   for eg 
 
@@ -56,13 +59,13 @@ So when you give a JS file to the JS engine to run it
 
   then for each iteration of the loop it's going to execute line 1 then line 2 then line 3.
 
-  > **Note** in this approach even though the result of someCalculation remains the same it executes the function for each iteration
+  > in this approach even though the result of someCalculation remains the same it executes the function for each iteration
 
 - **Profiler**: Covered in the next topic
 
 - **Compiler**: Translate the source code into machine code, does it by reading source code in one go and execute it i.e. Compiler works ahead of time to create a translation of the source code which is translated into bytecode(closely related to machine code i.e. understandable my machine)
 
-  ![Compiler](./../../../src/images/js/engine-5.png)
+  ![Compiler](./../../../../src/images/js/engine-5.png)
 
   for eg
 
@@ -91,7 +94,7 @@ So when you give a JS file to the JS engine to run it
   }
   ```
 
-  > Interpreter or compiler?
+❓ _Interpreter or compiler?_
 
 Both have their pros and cons
 | Interpeter | Compiler |
@@ -102,7 +105,7 @@ Both have their pros and cons
 
 JIT compiler, Let's understand how Google's v8 engine does this
 
-![JS Engine composition](../../../src/images/js/engine-3.gif)
+![JS Engine composition](../../../../src/images/js/engine-3.gif)
 
 Initially
 
@@ -136,7 +139,7 @@ So far we learned that JS Engine does a lot of work for us, but the more importa
 
 ## Understanding Heap
 
-![Heap](./../../../src/images/js/runtime-1.gif)
+![Heap](./../../../../src/images/js/runtime-1.gif)
 
 A place to store and write information (variables, objects, etc) --> Memory Heap --> used by JS engine for memory allocation
 
@@ -163,7 +166,7 @@ for (var i = 5; i > 1; i++) {
 
 Execute the above code in the console tab of dev tools in chrome and see what happens
 
-![Aw, Snap in modern browser](./../../../src/images/js/runtime-2.png)
+![Aw, Snap in modern browser](./../../../../src/images/js/runtime-2.png)
 
 3 common memory leaks with eg
 
@@ -187,7 +190,7 @@ setInterval(() => {
 
 ## Understanding Call Stack
 
-![call stack](./../../../src/images/js/runtime-3.gif)
+![call stack](./../../../../src/images/js/runtime-3.gif)
 
 A place to store and keep track of what is happening line by line on our code --> Call Stack - used by JS engine to keep track of where your code is, in execution
 
@@ -205,25 +208,25 @@ calc();
 ```
 
 - Run above code as snippet in Source tab of Developer console of chrome
-  ![chrome dev - console](./../../../src/images/js/runtime-4.png)
+  ![chrome dev - console](./../../../../src/images/js/runtime-4.png)
 - Notice when you execute script with debugger, script paused on debugger and even before calc function is called, there is something in the call stack named--> anonymous aka Global Execution Context which is something that will discuss in later topics
-  ![chrome dev - console](./../../../src/images/js/runtime-5.png)
+  ![chrome dev - console](./../../../../src/images/js/runtime-5.png)
 - When you press F11 Step into, calc method is pushed into call stack
-  ![chrome dev - console](./../../../src/images/js/runtime-6.png)
+  ![chrome dev - console](./../../../../src/images/js/runtime-6.png)
 - When you press F11 step 2 times, subtractTwo method is also pushed into the call stack
 
-  > Note: We are not done executing calc() instead calc() is called subtractTwo() and the call stack keeps track of the execution of code. Clearly looking at the call stack, I can say that we are subtractTwo().
+  > We are not done executing `calc()` instead `calc()` is called `subtractTwo()` and the call stack keeps track of the execution of code. Clearly looking at the call stack, I can say that we are `subtractTwo()`.
 
-  ![chrome dev - console](./../../../src/images/js/runtime-7.png)
+  ![chrome dev - console](./../../../../src/images/js/runtime-7.png)
 
 - When you press the F11 step 2 times, subtractTwo method is done executing and popped out from call stack
-  ![chrome dev - console](./../../../src/images/js/runtime-8.png)
+  ![chrome dev - console](./../../../../src/images/js/runtime-8.png)
 - When you press F11 step again, the calc method is done executing and popped out from the call stack
 - Finally, you can press F8 ( resume script execution )
 
 ### Stack Overflow
 
-![stack overflow](./../../../src/images/js/runtime-9.png)
+![stack overflow](./../../../../src/images/js/runtime-9.png)
 
 The most common way to create stack overflow is using recursion
 For eg
@@ -237,13 +240,13 @@ inception();
 
 Execute the above code in the console tab in dev tools in chrome
 
-![Chrome Dev - console](./../../../src/images/js/runtime-10.png)
+![Chrome Dev - console](./../../../../src/images/js/runtime-10.png)
 
 ### Garbage Collection
 
 - JS is garbage-collected language.
 
-  ![Garbage Collection](./../../../src/images/js/runtime-11.png)
+  ![Garbage Collection](./../../../../src/images/js/runtime-11.png)
 
 - When JS allocates memory i.e. within a function we created object, the object gets stored somewhere in our memory heap, automatically when JS finishes executing my function and let's say we don't want that object anymore
 - JS is going to automatically clean it up for us and free up the memory heap So only the data that's useful to us i.e. my program is still referring to will remain. This makes sure that we don't use all the memory that is available as we know memory is limited
@@ -255,13 +258,13 @@ Execute the above code in the console tab in dev tools in chrome
 
 It works on Mark and Sweeps algorithm
 
-![Mark and Sweep algorithm - 1](./../../../src/images/js/runtime-12.png)
+![Mark and Sweep algorithm - 1](./../../../../src/images/js/runtime-12.png)
 
-![Mark and Sweep algorithm - 2](./../../../src/images/js/runtime-13.png)
+![Mark and Sweep algorithm - 2](./../../../../src/images/js/runtime-13.png)
 
-![Mark and Sweep algorithm - 3](./../../../src/images/js/runtime-14.png)
+![Mark and Sweep algorithm - 3](./../../../../src/images/js/runtime-14.png)
 
-![Mark and Sweep algorithm - 4](./../../../src/images/js/runtime-15.png)
+![Mark and Sweep algorithm - 4](./../../../../src/images/js/runtime-15.png)
 
 eg 1.
 
@@ -292,7 +295,7 @@ function logHuman() {
 
 ### Single Threaded
 
-![single thread](./../../../src/images/js/runtime-16.png)
+![single thread](./../../../../src/images/js/runtime-16.png)
 
 Being single-threaded means that only one set of the instructions is executed at a time, it is not doing multiple things
 Reason for being single-threaded --> is that it has only 1 call stack.
@@ -309,7 +312,7 @@ alert(
 
 Run above code in console tab in dev tools of chrome
 
-![Chrome dev - console](./../../../src/images/js/runtime-17.png)
+![Chrome dev - console](./../../../../src/images/js/runtime-17.png)
 
 ❓ _Why would anyone like to block their application?_
 
@@ -321,7 +324,7 @@ It's not only the JS engine executing our code but the JS Runtime (NodeJS implem
 
 ## Understanding JS Runtime
 
-![JS runtime](./../../../src/images/js/runtime-18.gif)
+![JS runtime](./../../../../src/images/js/runtime-18.gif)
 
 To overcome the single-threaded nature of JS, JS Runtime came into the picture.
 
@@ -334,7 +337,7 @@ Already covered
 ### Browser Web API
 
 These are application that can do variety of things like send Http request, listen to DOM events (click, change), setTimeout, localStorage sessionStoage, indexedDB etc) - all are async operations.
-![Chrome dev - console](./../../../src/images/js/runtime-19.png)
+![Chrome dev - console](./../../../../src/images/js/runtime-19.png)
 So browsers, make use of LLL like c++ instead of JS Engine and blocking the thread to perform these async operations in the background and these APIs are called Web APIs (which are asynchronous, meaning they do something in background and return the data back to JS Engine)
 
 ### Event Loop and Callback Queue
@@ -403,4 +406,4 @@ JS Engine > Music Composer
 
 JS Runtime > Music Orchestra
 
-![JS vs runtime vs engine](./../../../src/images/js/runtime-20.gif)
+![JS vs runtime vs engine](./../../../../src/images/js/runtime-20.gif)
