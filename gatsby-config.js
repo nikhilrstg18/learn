@@ -38,16 +38,24 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
-    "gatsby-remark-highlight-code",
     "gatsby-remark-markmap",
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           "gatsby-remark-markmap",
-          "gatsby-remark-highlight-code",
+          {
+            resolve:"gatsby-remark-highlight-code",
+            options:{
+              lineNumbers:true,
+              terminal:'carbon',
+              theme:'dracula'
+            }
+          },
           "gatsby-remark-gifs",
           `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-prismjs-copy-button`,
+          `gatsby-remark-prismjs`,
           {
             resolve: `gatsby-remark-images`,
             options: {

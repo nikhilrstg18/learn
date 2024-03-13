@@ -8,7 +8,6 @@ export default function Book({ data }) {
     data.markdownRemark;
   const { title, stack, next, prev, slug } = frontmatter;
   const sideMenu = customSort(data?.allDirectory?.edges?.map(x=>x.node));
-  debugger
   function customSort(words) {
     const order = ["fundamentals", "beginner", "intermediate", "advance", "export"];
     

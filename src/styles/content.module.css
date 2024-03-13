@@ -2,6 +2,9 @@
   min-width: 12%;
   max-width: 18%;
 }
+.tableOfContent h4{
+  background: unset;
+}
 .tableOfContent ul {
   list-style: none;
   border-left: 2px solid grey;
@@ -14,4 +17,8 @@
   padding: .1rem 0;
   font-style: italic;
   font-size: .75rem;
+}
+.tableOfContent ul li a {
+  text-decoration: none;
+  color: lightcoral;
 }
